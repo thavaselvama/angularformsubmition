@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="formExample">
+
+<head>
+    <title>simple form with AngualrJS-shabeebk.com blog</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <script src="js/angular.js"></script>
+    <script src="js/formjs.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="formCtrl">
+        <form name="userForm" class="well form-search">
+
+            <input type="text" ng-model="name" class="input-medium search-query" placeholder="Name" required>
+            <input type="email" ng-model="email" class="input-medium search-query" placeholder="Email" required>
+            <input type="text" ng-model="message" class="input-medium search-query" placeholder="Message" required>
+            <button type="submit" class="btn" ng-click="formsubmit(userForm.$valid)" ng-disabled="userForm.$invalid">Submit </button>
+
+        </form>
+        <pre ng-model="result">
+                {{result}}
+            </pre>
+    </div>
+    <a href="http://shabeebk.com/simple-form-submit-in-angularjs-php/">Details</a>
+
+</body>
+
+</html>
